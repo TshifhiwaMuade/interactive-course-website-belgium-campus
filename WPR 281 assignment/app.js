@@ -5,8 +5,7 @@ const courses = [
         duration: "1 year",
         description: "A one-year higher certificate program.",
         modules: ["Module 1", "Module 2", "Module 3"],
-        lecturers: ["Lecturer A", "Lecturer B"],
-        venues: ["Venue 1", "Venue 2"],
+        
         studyGuide: "study-guide.pdf",
         startDate: "2024-09-01"
     },
@@ -16,8 +15,7 @@ const courses = [
         duration: "2 years",
         description: "A two-year diploma program.",
         modules: ["Module 1", "Module 2", "Module 3"],
-        lecturers: ["Lecturer C", "Lecturer D"],
-        venues: ["Venue 1", "Venue 2"],
+       
         studyGuide: "study-guide.pdf",
         startDate: "2024-10-01"
     }
