@@ -8,7 +8,6 @@ const courses = [
         lecturers: ["Lecturer A", "Lecturer B"],
         venues: ["Venue 1", "Venue 2"],
         studyGuide: "study-guide.pdf",
-        videoLink: "https://www.youtube.com/embed/dQw4w9WgXcQ",
         startDate: "2024-09-01"
     },
     {
@@ -20,7 +19,6 @@ const courses = [
         lecturers: ["Lecturer C", "Lecturer D"],
         venues: ["Venue 1", "Venue 2"],
         studyGuide: "study-guide.pdf",
-        videoLink: "https://www.youtube.com/embed/dQw4w9WgXcQ",
         startDate: "2024-10-01"
     }
     
