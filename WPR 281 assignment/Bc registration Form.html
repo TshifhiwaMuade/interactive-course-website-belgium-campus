@@ -156,14 +156,15 @@ img:hover{
     
     <h1>Belgium Campus Enrollment Form</h1><a href="index.html"><img src="bc logo and favi.png" width="50%" height="50%" style="margin-left: -20%; margin-top: -15%;"></a> 
 
+    
     <form>
         
     <fieldset>
 
         <legend>Personal Infromation</legend>
 
-            <label for="fullnmes">Full Names:</label>
-            <input type="text" id="fullnmes" required placeholder="John Doe" ><br>
+            <label for="fullnames">Full Names:</label>
+            <input type="text" id="fullnames" required placeholder="John Doe" ><br>
 
             <label for="DOB">Date of Birth:</label>
             <input type="date" id="DOB" name="DateOfBirth" required><br>
@@ -286,8 +287,8 @@ img:hover{
         <legend>Agreement</legend>
 
         <label for="terms">Do you agree to the terms and conditions</label><br>
-        <label>Yes</label>  <input type="radio" name="terms" id="termyes" required>
-        <label>NO</label>   <input type="radio" name="terms" id="termno" required><br>
+        <label>Yes</label>  <input type="radio" name="terms" id="terms-yes" required value="yes">
+        <label>NO</label>   <input type="radio" name="terms" id="terms-no" required value="no"><br>
 
         <label for="accuracy-checkbox">I confirm that the information provided is accurate and complete.</label>
         <input type="checkbox" id="accuracy-checkbox" required>
@@ -307,7 +308,9 @@ img:hover{
      </fieldset>
 
     </div>
-
+    <div class="output" id="betterbe">
+         
+    </div>
      
 
     </form>
