@@ -1,26 +1,38 @@
 const courses = [
     {
-        title: "Higher Certificate",
-        code: "HC001",
+        title: "Higher Certificate in Information technology",
+        code: "HIT001",
         duration: "1 year",
-        description: "A one-year higher certificate program.",
         modules: ["Module 1", "Module 2", "Module 3"],
-        
-        studyGuide: "study-guide.pdf",
         startDate: "2024-09-01"
     },
     {
-        title: "Diploma",
-        code: "DP001",
-        duration: "2 years",
-        description: "A two-year diploma program.",
+        title: "Diploma in Information Technology",
+        code: "DIT001",
+        duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
-       
-        studyGuide: "study-guide.pdf",
+        startDate: "2024-10-01"
+    },
+    {
+        title: "Bachelor of Information Technology",
+        code: "BIT001",
+        duration: "3 years",
+        modules: ["Module 1", "Module 2", "Module 3"],
+        startDate: "2024-10-01"
+    },
+    {
+        title: "Bachelor of Computing",
+        code: "DP001",
+        duration: "4 years",
+        modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01"
     }
-    
 ];
+
+document.addEventListener('DOMContentLoaded', function() {
+   
+    displayCourses(courses);
+});
 
 document.getElementById('search-button').addEventListener('click', function() {
     const query = document.getElementById('search-bar').value.toLowerCase();
@@ -33,14 +45,21 @@ function displayCourses(courses) {
     container.innerHTML = '';
     courses.forEach(course => {
         const courseCard = document.createElement('div');
-        courseCard.className = 'course-card col-md-4';
+        courseCard.className = 'course-card col-md-6';
         courseCard.innerHTML = `
-            <h3 class="course-title">${course.title}</h3>
-            <p><strong>Code:</strong> ${course.code}</p>
-            <p><strong>Duration:</strong> ${course.duration}</p>
-            <p>${course.description}</p>
+            <div class="card bg-light mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${course.title}</h5>
+                    <p><strong>Code:</strong> ${course.code}</p>
+                    <p><strong>Duration:</strong> ${course.duration}</p>
+                    <div class="card-info">
+                        <p><strong>Modules:</strong> ${course.modules.join(', ')}</p>
+                        <p><strong>Start Date:</strong> ${course.startDate}</p>
+                    </div>
+                </div>
+            </div>
         `;
-        courseCard.querySelector('.course-title').addEventListener('click', function() {
+        courseCard.querySelector('.card-title').addEventListener('click', function() {
             displayCourseDetails(course);
         });
         container.appendChild(courseCard);
@@ -53,17 +72,14 @@ function displayCourseDetails(course) {
         <h2>${course.title}</h2>
         <p><strong>Code:</strong> ${course.code}</p>
         <p><strong>Duration:</strong> ${course.duration}</p>
-        <p>${course.description}</p>
         <h3>Modules</h3>
         <ul id="modules-list">${course.modules.map(module => `<li>${module}</li>`).join('')}</ul>
         <h3>Lecturers</h3>
-        <ul>${course.lecturers.map(lecturer => `<li>${lecturer}</li>`).join('')}</ul>
+        <ul>${course.lecturers ? course.lecturers.map(lecturer => `<li>${lecturer}</li>`).join('') : ''}</ul>
         <h3>Venues</h3>
-        <ul>${course.venues.map(venue => `<li>${venue}</li>`).join('')}</ul>
-        <h3>Study Guide</h3>
-        <a href="${course.studyGuide}" download>Download Study Guide</a>
+        <ul>${course.venues ? course.venues.map(venue => `<li>${venue}</li>`).join('') : ''}</ul>
         <h3>Module Video</h3>
-        <iframe width="560" height="315" src="${course.videoLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="${course.videoLink ? course.videoLink : ''}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <button id="print-button" class="btn btn-secondary mt-3">Print Course</button>
         <button id="enroll-button" class="btn btn-primary mt-3">Enroll</button>
     `;
