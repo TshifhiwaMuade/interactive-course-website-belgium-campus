@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC registration From</title>
+    <link rel="icon" href="bc logo and favi.png" type="image/x-icon" >
+
+</head>
+<style>
+
+label {
+    display: inline-block;
+    width: 230px; 
+    padding: 10px 0;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.radio_btn label{
+    width: auto;
+    margin-top: -1%;
+}
+select{
+    display: inline-block;
+    width: 150px; 
+    padding: 10px 0;
+    vertical-align: top;
+   margin-left: 0.8%;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.557);
+    border: 3px solid #007bff ;
+    border-radius: 10px;
+}
+
+Select:hover{
+    background-color: rgba(194, 196, 184, 0.482);
+    color: rgb(255, 64, 0);
+    cursor: pointer;
+    border-radius: 20px ;
+    border-color:  #1414ff;
+}
+input[type="text"]:hover{
+    background-color: rgba(194, 196, 184, 0.482);
+    color: rgb(255, 64, 0);
+    cursor: pointer;
+    border-radius: 20px;
+    border-color:  #1414ff;
+
+}
+input[type="email"]:hover{
+    background-color: rgba(194, 196, 184, 0.482);
+    color: rgb(255, 64, 0);
+    cursor: pointer;
+    border-radius: 20px;
+    border-color:  #1414ff;
+
+}
+input[type="number"]:hover{
+    background-color: rgba(194, 196, 184, 0.482);
+    color: rgb(255, 64, 0);
+    cursor: pointer;
+    border-radius: 20px;
+    border-color:  #1414ff;
+
+}
+input[type="date"]:hover{
+    background-color: rgba(194, 196, 184, 0.482);
+    color: rgb(255, 64, 0);
+    cursor: pointer;
+    border-radius: 20px;
+    border-color:  #1414ff;
+
+}
+
+legend{
+    margin-top: 20%;
+    padding-bottom: 2%;
+
+}
+h1{
+    text-align: center;
+    }
+h1:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    color: #007bff;
+}
+    legend{
+
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    }
+legend:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    color: #007bff;
+}
+    label{
+        
+        padding: 20px;
+
+    }
+    #employed{
+        margin-left: 2.4%;
+    }
+
+    input{
+
+        padding: 6px;
+        margin: 10px;
+        
+    }
+   textarea{
+    margin-left: 20px;
+    background-color: rgba(0, 170, 249, 0.253);
+    border-radius: 12px;
+    font-size: 15px;
+   }
+
+body{
+    padding: 20px;
+    
+}
+button{
+    padding: 10px;
+    border-radius: 5px;
+    background: #007bff;
+    border: solid  white 2px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-family: 'Gill Sans';
+}
+button:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    background-color: #064bed;
+    text-transform: capitalize;
+    border-color:#1414ff;
+}
+*{
+    transition: all .45s ease;
+}
+img:hover{
+    transform: scale(1.3);
+    z-index: 2;
+    color: #007bff;
+}
+
+
+</style>
+<body>
+    
+    <h1>Belgium Campus Enrollment Form</h1><img src="bc logo and favi.png" width="50%" height="50%" style="margin-left: -20%; margin-top: -15%;"> 
+
+    <form>
+        
+    <fieldset>
+
+        <legend>Personal Infromation</legend>
+
+            <label for="fullnmes">Full Names:</label>
+            <input type="text" id="fullnmes" required placeholder="John Doe" ><br>
+
+            <label for="DOB">Date of Birth:</label>
+            <input type="date" id="DOB" name="DateOfBirth" required><br>
+
+            <label for="Gender">Gender:</label>
+            <select id="Gender" required>
+                    <option>  </option>
+                    <option>Male</option>
+                    <option>Female</option>
+            </select><br>
+
+            <label  for="Natinality">Nationality:</label>
+            <input type="text" id="Natinality" name="Nationality" required placeholder="South-African">
+
+
+    </fieldset>
+
+    <br><br>
+
+    <fieldset>
+
+        <legend>Contact Information</legend>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required placeholder="johndoe@gmail.com"><br>
+
+        <label for="PhoneNumber" >Phone Number:</label>
+        <input type="number" id="PhoneNumber" required placeholder="012 345 6789"><br>
+
+        <label for="ResAddress">Residential Address:</label>
+        <input type="text" id="ResAddress" required placeholder="Gauteng, Alberton, Vain str, no 45, 0245 "><br>
+
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+
+        <legend>Academic Infromation</legend>
+
+        <label for="HQA">Highest Qualification Achieved:</label>
+        <input type="text" id="HQA" name="HighestQualificationAchieved" required placeholder="BSc in finance"><br>
+
+        <label for="lastinstitution">Name of Last Institution Attended:</label>
+        <input type="text" name="Previous Institution" id="lastinstitution" required placeholder="University of Houston"><br>
+
+        <label for="grad">Year Of Graduation:</label>
+        <input type="text" id="grad" name="YerOfGradution" required><br>
+
+
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+
+        <legend>Cousre Selection</legend>
+
+        <label for="course">Course Name:</label>
+        <select id="course" required>
+            <option></option>
+            <option>Higher Certificate</option>
+            <option>Diplomaa in IT</option>
+            <option>Bachelor's in IT</option>
+            <option>Bachelor's of Computing</option>
+        </select><br>
+
+        <label for="campus">Campus of choice:</label>
+        <select id="campus" required>
+            <option></option>
+            <option>Pretoria</option>
+            <option>Kempton Park</option>
+            <option>Stellenbosch</option>
+        </select><br>
+
+        <label for="startDate">Preferred start Date:</label>
+        <input type="date" id="startDate" name="Start-Date" required><br>
+
+        <label style="width: auto;">Why did you choose thid course?</label><br><br>
+        <textarea rows="10" cols="100">✨I Love(❤️) IT. 🧑🏽‍💻
+        </textarea>
+        
+
+    </fieldset>
+
+    <br><br>
+
+
+    <div class="radio_btn">
+
+        <fieldset>
+
+        <legend>Additional Information</legend>
+
+        <label for="employment">Are you currently employed?</label><br>
+        <label>Yes</label>  <input type="radio" name="Employementstat" id="employment">
+        <label>NO</label>   <input type="radio" name="Employementstat" id="employment"><br>
+
+        <label for="employed">If yes, where were you employed?</label>
+        <input type="text" name="employed" id="employed" placeholder=" KFC"><br>
+
+        <label>How did you hear about this course?</label>
+        <select>
+            <option></option>
+            <option>Search engine</option>
+            <option>Social media</option>
+            <option>Ad</option>
+            <option>Referral</option>
+            <option>Other</option>
+        </select><br>
+
+        <label for="special">Do you have any special requirements or accomodations?</label><br>
+        <label>Yes</label>  <input type="radio" name="special" id="special" value="yes">
+        <label>NO</label>   <input type="radio" name="special" id="special" value="No"><br>
+
+
+
+     </fieldset>  
+     <br><br>
+     
+     <fieldset>
+        <legend>Agreement</legend>
+
+        <label for="terms">Do you agree to the terms and conditions</label><br>
+        <label>Yes</label>  <input type="radio" name="terms" id="termyes" required>
+        <label>NO</label>   <input type="radio" name="terms" id="termno" required><br>
+
+        <label for="accuracy-checkbox">I confirm that the information provided is accurate and complete.</label>
+        <input type="checkbox" id="accuracy-checkbox" required>
+        
+
+
+
+
+        <p>"By submitting this form, I acknowledge that I have read and understood the terms and conditions associated with the course enrollment. I agree to abide by all the rules and regulations set forth by the institution. I confirm that the information provided is accurate and truthful to the best of my knowledge. I understand that providing false information may result in the cancellation of my enrollment and any associated benefits. Furthermore, I consent to the use of my personal data for administrative and academic purposes in accordance with the institution's privacy policy."
+
+
+        </p><br>
+        <center>
+            <button type="submit" name="SubmitButton">Submit Enrollment Form</button>
+        </center>
+        
+     </fieldset>
+
+    </div>
+
+     
+
+    </form>
+   <script src="form.js"></script> 
+</body>
+</html>
