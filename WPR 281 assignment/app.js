@@ -1,28 +1,28 @@
 const courses = [
     {
         title: "Higher Certificate in Information technology",
-        code: "HIT001",
+        code: "HIT#51",
         duration: "1 year",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-09-01"
     },
     {
         title: "Diploma in Information Technology",
-        code: "DIT001",
+        code: "DIT#61",
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01"
     },
     {
         title: "Bachelor of Information Technology",
-        code: "BIT001",
+        code: "BIT#71",
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01"
     },
     {
         title: "Bachelor of Computing",
-        code: "DP001",
+        code: "DP#81",
         duration: "4 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01"
