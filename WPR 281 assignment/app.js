@@ -4,33 +4,36 @@ const courses = [
         code: "HIT#51",
         duration: "1 year",
         modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-09-01"
+        startDate: "2024-09-01",
+        link: "Higher Certificate.html"
     },
     {
         title: "Diploma in Information Technology",
         code: "DIT#61",
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01"
+        startDate: "2024-10-01",
+        link: "course2.html"
     },
     {
         title: "Bachelor of Information Technology",
         code: "BIT#71",
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01"
+        startDate: "2024-10-01",
+        link: "course3.html"
     },
     {
         title: "Bachelor of Computing",
         code: "DP#81",
         duration: "4 years",
         modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01"
+        startDate: "2024-10-01",
+        link: "course4.html"
     }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-   
     displayCourses(courses);
 });
 
@@ -56,13 +59,17 @@ function displayCourses(courses) {
                         <p><strong>Modules:</strong> ${course.modules.join(', ')}</p>
                         <p><strong>Start Date:</strong> ${course.startDate}</p>
                     </div>
+                    <button class="see-more-btn btn btn-primary" data-link="${course.link}">See More</button>
                 </div>
             </div>
         `;
-        courseCard.querySelector('.card-title').addEventListener('click', function() {
-            displayCourseDetails(course);
-        });
         container.appendChild(courseCard);
+    });
+
+    document.querySelectorAll('.see-more-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            window.location.href = this.getAttribute('data-link');
+        });
     });
 }
 
