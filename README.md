@@ -7,4 +7,4 @@ Glory Binkatabana 600646
 Ndinae Muumba 600755
 Mkhabela Charmaine 601395
 
-[Image](Screenshot 2024-08-07.png)
+![alt text](image-1.png)
