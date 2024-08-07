@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Artboard-4-copy.png');
+    background-size: cover;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+main {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #007bff;
+}
+h1{
+    color: white;
+}
+fieldset {
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #4c516d33;
+    color: white;
+    padding: 70px 70px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    color: white;
+}
+
+.table a {
+    color: white;
+    text-decoration: underline;
+}
+
+.table a:hover {
+    color: #0056b3;
+}

@@ -5,7 +5,7 @@ const courses = [
         duration: "1 year",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-09-01",
-        link: "Higher Certificate.html"
+        link: "/WPR 281 assignment/courses/Higher Certificate.html"
     },
     {
         title: "Diploma in Information Technology",
@@ -13,7 +13,7 @@ const courses = [
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01",
-        link: "course2.html"
+        link: "/WPR 281 assignment/courses/DIT.html"
     },
     {
         title: "Bachelor of Information Technology",
@@ -21,7 +21,7 @@ const courses = [
         duration: "3 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01",
-        link: "course3.html"
+        link: "/WPR 281 assignment/courses/BIT.html"
     },
     {
         title: "Bachelor of Computing",
@@ -29,7 +29,7 @@ const courses = [
         duration: "4 years",
         modules: ["Module 1", "Module 2", "Module 3"],
         startDate: "2024-10-01",
-        link: "course4.html"
+        link: "/WPR 281 assignment/courses/BComp.html"
     }
 ];
 
