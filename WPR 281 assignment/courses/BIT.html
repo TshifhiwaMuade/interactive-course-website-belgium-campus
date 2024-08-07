@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="BIT.css">
 </head>
 
 <body>
     <header>
-        <h3><button><a href="#">Back</a></button></h3>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="btn btn-light" onclick="window.history.back();">Back</button>
+            <h1>Bachelor of information technology</h1>
+        </nav>
     </header>
 
-    <main>
+    <main class="container mt-5">
         <section>
-            <h3 class="heading1">General</h3>
-            <fieldset class="hh1">
-                <p class="h1">
+            <h3 class="text-primary">General</h3>
+            <fieldset class="bg-primary text-white p-3 rounded">
+                <p>
                     This IT degree focuses on information systems modules and will provide you with foundational knowledge in software engineering and business intelligence. You will cover an extensive range of topics, from mobile and wireless networks to artificial intelligence and intelligent systems.
                     <br><br>
                     By placing a strong focus on knowledge, execution, and professional skills, this IT degree will transform you into a complete professional with a range of interesting opportunities to explore, including the development of mobile and web-based apps and even game development.
@@ -26,10 +30,10 @@
         </section>
 
         <section>
-            <h3 class="heading2">Picking a Niche</h3>
-            <fieldset class="hh2">
+            <h3 class="text-primary">Picking a niche</h3>
+            <fieldset class="bg-primary text-white p-3 rounded">
                 <h4>Bachelor of IT - Software Development Specialisation</h4>
-                <p class="h2">
+                <p >
                     The knowledge you gain in object-oriented and event-driven programming will mould you into a world-class programmer.
                     <br><br>
                     After studying this IT degree, you will have learnt to develop functional software programs from designs and programming instructions received from systems architects, software engineers, and systems designers. The applications you develop will be deployed on desktops, networked computers, the internet, and multiplatform devices.
@@ -37,24 +41,21 @@
             </fieldset>
         </section>
 
-        <section>
-            <h3 class="hh3">Course Breakdown</h3>
-
-            <div class="dropdown">
-                <button class="drop">1'st year course breakdown</button>
-                <div class="content">
-                    <table border="1" width="600" height="50">
-                        <thead>
-                            <tr bgcolor="darkgrey">
-                                <th>Subject</th>
-                                <th>Code</th>
-                                <th>View</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr bgcolor="grey">
-                                <th colspan="3">Core</th>
-                            </tr>
+        <section class="mt-5">
+            <h3 class="text-primary">Course Breakdown</h3>
+            <h4>First Year Course Breakdown</h4>
+            <table class="table table-bordered mt-2">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Code</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary text-white">
+                        <th colspan="3">Core</th>
+                    </tr>
                             <tr>
                                 <td>Academic Writing 171</td>
                                 <td>ACW171</td>
@@ -138,21 +139,19 @@
                 </div>
             </div>
 
-            <div class="dropdown">
-                <button class="drop">2nd year course breakdown</button>
-                <div class="content">
-                    <table border="1" width="600" height="50">
-                        <thead>
-                            <tr bgcolor="darkgrey">
-                                <th>Subject</th>
-                                <th>Code</th>
-                                <th>View</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr bgcolor="grey">
-                                <th colspan="3">Core</th>
-                            </tr>
+            <h4>Second Year Course Breakdown</h4>
+            <table class="table table-bordered mt-2">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Code</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary text-white">
+                        <th colspan="3">Core</th>
+                    </tr>
                             <tr>
                                 <td>Cloud-Native Application Architecture 271</td>
                                 <td>CNA271</td>
@@ -236,21 +235,19 @@
                 </div>
             </div>
 
-            <div class="dropdown">
-                <button class="drop">3rd year course breakdown</button>
-                <div class="content">
-                    <table border="1" width="600" height="50">
-                        <thead>
-                            <tr bgcolor="darkgrey">
-                                <th>Subject</th>
-                                <th>Code</th>
-                                <th>View</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr bgcolor="grey">
-                                <th colspan="3">Core</th>
-                            </tr>
+            <h4>Third Year Course Breakdown</h4>
+            <table class="table table-bordered mt-2">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Code</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary text-white">
+                        <th colspan="3">Core</th>
+                    </tr>
                             <tr>
                                 <td>Business Intelligence 371</td>
                                 <td>BIN371</td>
@@ -325,20 +322,20 @@
                     </table>
                 </div>
             </div>
-            <a href="/WPR 281 assignment/Bc registration Form.html">
-                <button type="button">Enroll Now</button>
+            <a href="/WPR 281 assignment/Bc registration Form.html" class="btn btn-primary btn-lg">
+                Enroll Now
             </a>
+            
         </section>
     </main>
 
-    <footer class="page bottom">
-        <p>&copy; 2024, Property of <a href="#">Belgium Campus ITversity</a>, complimentary to Glory Bintakabana, Tshifhiwa Makhani Nthambeleni Muade, Charmaine Mkhabela, Ndinae Muumba.
-            <br><br>
-            Contact us: 010 593 5368
-            <br><br>
-            info@belgiumcampus.ac.za
-        </p>
+    <footer class="page-footer bg-dark text-white text-center py-4">
+        <p>&copy; 2024, Property of <a href="#" class="text-white">Belgium Campus ITversity</a>, complimentary to Glory Bintakabana, Tshifhiwa Makhani Nthambeleni Muade, Charmaine Mkhabela, Ndinae Muumba.</p>
+        <p>Contact us: 010 593 5368</p>
+        <p>Email: info@belgiumcampus.ac.za</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -3,32 +3,32 @@ const courses = [
         title: "Higher Certificate in Information technology",
         code: "HIT#51",
         duration: "1 year",
-        modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-09-01",
+        modules: ["Innovation and Leadership 201", "Programming 252", "Database Development 251"],
+        startDate: "2025-02-01",
         link: "/WPR 281 assignment/courses/Higher Certificate.html"
     },
     {
         title: "Diploma in Information Technology",
         code: "DIT#61",
-        duration: "3 years",
-        modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01",
+        duration: "2 years",
+        modules: ["Business Communication 161", "Database Functionality 161", "Programming 261"],
+        startDate: "2025-03-01",
         link: "/WPR 281 assignment/courses/DIT.html"
     },
     {
         title: "Bachelor of Information Technology",
         code: "BIT#71",
         duration: "3 years",
-        modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01",
+        modules: ["English Communication 171", "Entrepreneurship 171", "Innovation and Leadership 202"],
+        startDate: "2024-03-01",
         link: "/WPR 281 assignment/courses/BIT.html"
     },
     {
         title: "Bachelor of Computing",
         code: "DP#81",
         duration: "4 years",
-        modules: ["Module 1", "Module 2", "Module 3"],
-        startDate: "2024-10-01",
+        modules: ["Programming 181", "Information Systems 281", "Project Management 381"],
+        startDate: "2024-03-01",
         link: "/WPR 281 assignment/courses/BComp.html"
     }
 ];
@@ -73,40 +73,34 @@ function displayCourses(courses) {
     });
 }
 
-function displayCourseDetails(course) {
-    const container = document.getElementById('course-content');
-    container.innerHTML = `
-        <h2>${course.title}</h2>
-        <p><strong>Code:</strong> ${course.code}</p>
-        <p><strong>Duration:</strong> ${course.duration}</p>
-        <h3>Modules</h3>
-        <ul id="modules-list">${course.modules.map(module => `<li>${module}</li>`).join('')}</ul>
-        <h3>Lecturers</h3>
-        <ul>${course.lecturers ? course.lecturers.map(lecturer => `<li>${lecturer}</li>`).join('') : ''}</ul>
-        <h3>Venues</h3>
-        <ul>${course.venues ? course.venues.map(venue => `<li>${venue}</li>`).join('') : ''}</ul>
-        <h3>Module Video</h3>
-        <iframe width="560" height="315" src="${course.videoLink ? course.videoLink : ''}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button id="print-button" class="btn btn-secondary mt-3">Print Course</button>
-        <button id="enroll-button" class="btn btn-primary mt-3">Enroll</button>
-    `;
+// function displayCourseDetails(course) {
+//     const container = document.getElementById('course-content');
+//     container.innerHTML = `
+//         <h2>${course.title}</h2>
+//         <p><strong>Code:</strong> ${course.code}</p>
+//         <p><strong>Duration:</strong> ${course.duration}</p>
+//         <h3>Modules</h3>
+//         <ul id="modules-list">${course.modules.map(module => `<li>${module}</li>`).join('')}</ul>
+//         <h3>Lecturers</h3>
+//         <ul>${course.lecturers ? course.lecturers.map(lecturer => `<li>${lecturer}</li>`).join('') : ''}</ul>
+//         <h3>Venues</h3>
+//         <ul>${course.venues ? course.venues.map(venue => `<li>${venue}</li>`).join('') : ''}</ul>
+//         <h3>Module Video</h3>
+//         <iframe width="560" height="315" src="${course.videoLink ? course.videoLink : ''}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//         <button id="print-button" class="btn btn-secondary mt-3">Print Course</button>
+//         <button id="enroll-button" class="btn btn-primary mt-3">Enroll</button>
+//     `;
 
-    document.getElementById('print-button').addEventListener('click', function() {
-        window.print();
-    });
 
-    document.getElementById('enroll-button').addEventListener('click', function() {
-        showCountdown(course.title, course.startDate);
-    });
 
-    const modulesList = document.getElementById('modules-list');
-    modulesList.addEventListener('click', function(event) {
-        if (event.target.tagName === 'LI') {
-            event.target.classList.toggle('completed');
-            updateCompletedModules();
-        }
-    });
-}
+//     const modulesList = document.getElementById('modules-list');
+//     modulesList.addEventListener('click', function(event) {
+//         if (event.target.tagName === 'LI') {
+//             event.target.classList.toggle('completed');
+//             updateCompletedModules();
+//         }
+//     });
+// }
 
 function updateCompletedModules() {
     const completedModules = Array.from(document.querySelectorAll('.completed')).map(li => li.textContent);
