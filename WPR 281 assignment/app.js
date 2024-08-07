@@ -4,7 +4,7 @@ const courses = [
         code: "HIT#51",
         duration: "1 year",
         modules: ["Innovation and Leadership 201", "Programming 252", "Database Development 251"],
-        startDate: "2025-02-01",
+        
         link: "/WPR 281 assignment/courses/Higher Certificate.html"
     },
     {
@@ -12,7 +12,7 @@ const courses = [
         code: "DIT#61",
         duration: "2 years",
         modules: ["Business Communication 161", "Database Functionality 161", "Programming 261"],
-        startDate: "2025-03-01",
+        
         link: "/WPR 281 assignment/courses/DIT.html"
     },
     {
@@ -20,7 +20,7 @@ const courses = [
         code: "BIT#71",
         duration: "3 years",
         modules: ["English Communication 171", "Entrepreneurship 171", "Innovation and Leadership 202"],
-        startDate: "2024-03-01",
+        
         link: "/WPR 281 assignment/courses/BIT.html"
     },
     {
@@ -28,7 +28,7 @@ const courses = [
         code: "DP#81",
         duration: "4 years",
         modules: ["Programming 181", "Information Systems 281", "Project Management 381"],
-        startDate: "2024-03-01",
+        
         link: "/WPR 281 assignment/courses/BComp.html"
     }
 ];
@@ -57,7 +57,7 @@ function displayCourses(courses) {
                     <p><strong>Duration:</strong> ${course.duration}</p>
                     <div class="card-info">
                         <p><strong>Modules:</strong> ${course.modules.join(', ')}</p>
-                        <p><strong>Start Date:</strong> ${course.startDate}</p>
+                        
                     </div>
                     <button class="see-more-btn btn btn-primary" data-link="${course.link}">See More</button>
                 </div>
@@ -72,6 +72,7 @@ function displayCourses(courses) {
         });
     });
 }
+
 
 // function displayCourseDetails(course) {
 //     const container = document.getElementById('course-content');
@@ -114,29 +115,29 @@ function updateCompletedModules() {
     document.querySelector('#completed-modules ul').innerHTML = completedModules.map(module => `<li>${module}</li>`).join('');
 }
 
-function showCountdown(courseTitle, startDate) {
-    const container = document.getElementById('course-content');
-    const countdownElement = document.createElement('div');
-    countdownElement.id = 'countdown-timer';
-    container.appendChild(countdownElement);
+// function showCountdown(courseTitle, startDate) {
+//     const container = document.getElementById('course-content');
+//     const countdownElement = document.createElement('div');
+//     countdownElement.id = 'countdown-timer';
+//     container.appendChild(countdownElement);
     
-    const targetDate = new Date(startDate).getTime();
+//     const targetDate = new Date(startDate).getTime();
     
-    const countdown = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+//     const countdown = setInterval(function() {
+//         const now = new Date().getTime();
+//         const distance = targetDate - now;
 
-        if (distance < 0) {
-            clearInterval(countdown);
-            countdownElement.innerHTML = "Course has started!";
-            return;
-        }
+//         if (distance < 0) {
+//             clearInterval(countdown);
+//             countdownElement.innerHTML = "Course has started!";
+//             return;
+//         }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML = `Course starts in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-}
+//         countdownElement.innerHTML = `Course starts in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+//     }, 1000);
+// }

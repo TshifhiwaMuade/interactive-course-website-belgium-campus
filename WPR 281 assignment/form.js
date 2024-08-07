@@ -42,7 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(message);
         } else {
             // If form is valid, display the confirmation message
-            output.innerHTML = `Hello and welcome ${fullname.value}, Belgium Campus Itversity thanks you for your form submission. <br> You have selected ${course.value}, that will take place at the campus of your choosing being: ${campus.value} starting on: ${startdate.value} <br> We hope to see you soon🧑🏽‍💻🧑🏽‍💻🧑🏽‍💻`;
+            const selectedStartDate = new Date(startdate.value);
+            const countdown = getCountdown(selectedStartDate);
+            
+            output.innerHTML = `Hello and welcome ${fullname.value}, Belgium Campus Itversity thanks you for your form submission. <br> You have selected ${course.value}, that will take place at the campus of your choosing being: ${campus.value} starting on: ${startdate.value} <br> ${countdown} <br> We hope to see you soon🧑🏽‍💻🧑🏽‍💻🧑🏽‍💻`;
 
             localStorage.setItem('Name', fullname.value);
             localStorage.setItem('Date of Birth', Date_of_birth ? Date_of_birth.value : '');
@@ -60,6 +63,23 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('Employment_status', Employment_status ? Employment_status.value : '');
             localStorage.setItem('Place_Of_Employment', Place_Of_Employment ? Place_Of_Employment.value : '');
             localStorage.setItem('Special_Requirements', Special_Requirements ? Special_Requirements.value : '');
+        }
+    }
+
+    function getCountdown(startDate) {
+        const today = new Date().getTime();
+        const startDateTime = startDate.getTime();
+        const timeLeft = startDateTime - today;
+
+        if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            return `Time left until the course starts: ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`;
+        } else {
+            return `The course has already started.`;
         }
     }
 
