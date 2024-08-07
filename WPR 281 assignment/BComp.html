@@ -48,7 +48,7 @@
 
     <h3 class="hh3">Course Breakdown</h3>
 
-    <h4>1st Year Course Breakdown</h4>
+    <h4>1st Year Course Breakdown <button id="course_completed">Course Completed</button></h4>
     <table class="table table-bordered mt-2">
         <thead class="thead-dark">
             <tr>
@@ -144,7 +144,7 @@
         </tbody>
     </table>
     <br><br>
-    <h4>2nd Year Course Breakdown</h4>
+    <h4>2nd Year Course Breakdown <button id="course_completed">Course Completed</button></h4>
     <table class="table table-bordered mt-2">
         <thead class="thead-dark">
             <tr>
@@ -231,7 +231,7 @@
     </table>
     <br><br>
 
-    <h4>3rd Year Course Breakdown</h4>
+    <h4>3rd Year Course Breakdown <button id="course_completed">Course Completed</button></h4>
     <table class="table table-bordered mt-2">
         <thead class="thead-dark">
             <tr>
@@ -318,7 +318,7 @@
     </table>
     <br><br>
 
-    <h4>4th Year Course Breakdown</h4>
+    <h4>4th Year Course Breakdown <button id="course_completed">Course Completed</button></h4>
     <table class="table table-bordered mt-2">
         <thead class="thead-dark">
             <tr>
@@ -352,9 +352,16 @@
         </tr>
        
     </table>
-    <a href="/WPR 281 assignment/Bc registration Form.html" class="btn btn-primary btn-lg">
+    <a href="Bc registration Form.html" class="btn btn-primary btn-lg">
         Enroll Now
     </a>
+
+    <div class="mt-5">
+        <h4>Completed Courses</h4>
+        <ul id="completed-courses-list" class="list-group">
+        </ul>
+    </div>
+    <button id="print_completed_courses" class="btn btn-primary btn-lg" >Print completed courses</button>
     
 </main>
 <footer class="page-footer bg-dark text-white text-center py-4">
@@ -365,5 +372,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="completed_courses.js"></script>
 </body>
 </html>
