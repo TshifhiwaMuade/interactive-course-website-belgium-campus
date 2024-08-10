@@ -5,7 +5,7 @@ const courses = [
         duration: "1 year",
         modules: ["Innovation and Leadership 201", "Programming 252", "Database Development 251"],
         
-        link: "/WPR 281 assignment/courses/Higher Certificate.html"
+        link: "Higher Certificate.html"
     },
     {
         title: "Diploma in Information Technology",
@@ -13,7 +13,7 @@ const courses = [
         duration: "2 years",
         modules: ["Business Communication 161", "Database Functionality 161", "Programming 261"],
         
-        link: "/WPR 281 assignment/courses/DIT.html"
+        link: "DIT.html"
     },
     {
         title: "Bachelor of Information Technology",
@@ -21,7 +21,7 @@ const courses = [
         duration: "3 years",
         modules: ["English Communication 171", "Entrepreneurship 171", "Innovation and Leadership 202"],
         
-        link: "/WPR 281 assignment/courses/BIT.html"
+        link: "BIT.html"
     },
     {
         title: "Bachelor of Computing",
@@ -29,7 +29,7 @@ const courses = [
         duration: "4 years",
         modules: ["Programming 181", "Information Systems 281", "Project Management 381"],
         
-        link: "/WPR 281 assignment/courses/BComp.html"
+        link: "BComp.html"
     }
 ];
 
